@@ -21,3 +21,9 @@ Finally, you can run the application by executing this code in your terminal and
 Docker allows us to calaborate easier by containerizing our application and having a strict set of rules of how your Virtual Machine will build the environment for the application. This reduces time spent on setting up your work environment and reduces the risk of inconsistencies in the way we setup our local machines. Essentially, it unifies the way we all work on a single application.
 
 Learn more about docker here: https://www.docker.com/
+
+# Cassandra Architecture
+# Where does this application fit into the Cassandra Architecture?
+We have multiple applications running behind the scenes to drive the Cassandra project. The webcrawlers are the first stage in the Ecosystem, where they extract the course data to be sent to the Cassandra Database.
+
+<!-- [Docker](https://github.com/the-muses-ltd/Multithreaded-Webcrawler-Cassandra/blob/master/misc/kisspng-docker-application-software-asp-net-core-microserv-docker-logo-software-logo-5bf733d49f77b7.4831513815429273166532.png) -->
