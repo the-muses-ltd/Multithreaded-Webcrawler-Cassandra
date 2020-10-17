@@ -7,11 +7,12 @@ from bs4 import BeautifulSoup
 import csv
 from concurrent.futures import ProcessPoolExecutor, as_completed, ThreadPoolExecutor
 import time
-
+import logging
 
 
 def courses_spider(max_pages):
     data_to_csv = [] #holds all data to send to csv
+    print("Webcrawler workers have started") 
 
     # remove max pages loop (unecessary)
     page = 1
@@ -20,15 +21,17 @@ def courses_spider(max_pages):
         source_code = requests.get(url)
         plain_text = source_code.text
         soup = BeautifulSoup(plain_text, 'html.parser')
+        # Multithread only the work:
+        # Tuning is required to find the most efficient amount of workers in the thread pool.
         with ThreadPoolExecutor(max_workers=30) as executor:
             start = time.time()
-            futures = [ executor.submit(work, link) for link in soup.findAll('h4', {'class': 'course_title'}, limit=10000) ]
+            futures = [ executor.submit(work, link) for link in soup.findAll('h4', {'class': 'course_title'}, limit=1000) ]
             data_to_csv = []
             for result in as_completed(futures):
                 data_to_csv.append(result.result())
-                # print(result.result())
             end = time.time()
-            print("Time Taken: {:.6f}s".format(end-start))
+            print("Time Taken to complete: {:.6f}s".format(end-start))
+            print("Courses extracted: ", len(data_to_csv))
         page += 1
     export_to_csv(data_to_csv)
 
@@ -91,7 +94,5 @@ def export_to_csv(csv_data):
             } 
             csv_writer.writerow(course_data)
             
-
-courses_spider(1)
 
 
