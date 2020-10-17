@@ -26,4 +26,4 @@ Learn more about docker here: https://www.docker.com/
 # Where does this application fit into the Cassandra Architecture?
 We have multiple applications running behind the scenes to drive the Cassandra project. The webcrawlers are the first stage in the Ecosystem, where they extract the course data to be sent to the Cassandra Database.
 
-<!-- [Docker](https://github.com/the-muses-ltd/Multithreaded-Webcrawler-Cassandra/blob/master/misc/kisspng-docker-application-software-asp-net-core-microserv-docker-logo-software-logo-5bf733d49f77b7.4831513815429273166532.png) -->
+[Docker](https://github.com/the-muses-ltd/Multithreaded-Webcrawler-Cassandra/blob/master/misc/Cassandra%20Architecture%20(2).jpg)
