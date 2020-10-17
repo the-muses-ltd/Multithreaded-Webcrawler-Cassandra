@@ -76,7 +76,7 @@ def cut_white_spaces(title):
     course_year = title[index:]
     return ("%s %s" % (course_name,course_year))
 
-#exports data to a formatted csv file
+# Exports data to a formatted csv file, this will be replaced with multithreaded API calls to the Cassandra Prisma Database
 def export_to_csv(csv_data):
     with open('web_crawl_data.csv',mode='w') as csv_file:
         field_names = ['Title','URL extension','External Website Logo','URL(href)','Description','Course logo URL']
