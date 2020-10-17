@@ -11,9 +11,10 @@ import time
 
 
 def courses_spider(max_pages):
-    page = 1
     data_to_csv = [] #holds all data to send to csv
 
+    # remove max pages loop (unecessary)
+    page = 1
     while page <= max_pages:
         url = 'https://ocw.mit.edu/courses/'
         source_code = requests.get(url)
@@ -21,7 +22,7 @@ def courses_spider(max_pages):
         soup = BeautifulSoup(plain_text, 'html.parser')
         with ThreadPoolExecutor(max_workers=30) as executor:
             start = time.time()
-            futures = [ executor.submit(work, link) for link in soup.findAll('h4', {'class': 'course_title'}, limit=5000) ]
+            futures = [ executor.submit(work, link) for link in soup.findAll('h4', {'class': 'course_title'}, limit=10000) ]
             data_to_csv = []
             for result in as_completed(futures):
                 data_to_csv.append(result.result())
