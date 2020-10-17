@@ -12,7 +12,7 @@ import logging
 
 def courses_spider(max_pages):
     data_to_csv = [] #holds all data to send to csv
-    print("Webcrawler workers have started") 
+    print("Webcrawler workers have started, please wait while we finish crawling...") 
 
     # remove max pages loop (unecessary)
     page = 1
