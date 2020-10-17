@@ -23,7 +23,7 @@ Docker allows us to calaborate easier by containerizing our application and havi
 Learn more about docker here: https://www.docker.com/
 
 # Cassandra Architecture
-# Where does this application fit into the Cassandra Architecture?
+## Where does this application fit into the Cassandra Architecture?
 We have multiple applications running behind the scenes to drive the Cassandra project. The webcrawlers are the first stage in the Ecosystem, where they extract the course data to be sent to the Cassandra Database.
 
 ![Cassandra Architecture](https://github.com/the-muses-ltd/Multithreaded-Webcrawler-Cassandra/blob/master/misc/Cassandra%20Architecture%20(2).jpg)
