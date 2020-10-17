@@ -16,7 +16,7 @@ Finally, you can run the application by executing this code in your terminal and
 `docker run -p 5001:5000 multi-webcrawler`
 
 
-![Docker](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cleanpng.com%2Fpng-docker-application-software-asp-net-core-microserv-6858151%2F&psig=AOvVaw2uycPlOZJ0U2o5OqG6UdLQ&ust=1603023731873000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDZkvPOu-wCFQAAAAAdAAAAABAS)
+![Docker](https://github.com/the-muses-ltd/Multithreaded-Webcrawler-Cassandra/blob/master/misc/kisspng-docker-application-software-asp-net-core-microserv-docker-logo-software-logo-5bf733d49f77b7.4831513815429273166532.png)
 
 ## Docker Containerized Application
 # Why docker?
